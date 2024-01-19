@@ -67,7 +67,7 @@ body {
     border-radius: 10px 0px 0px 0px;
     gap: 15px;
     align-items: center;
-    margin-top: 60px;
+    margin-top: 50px;
 }
 
 .sidebar nav ul li:hover {
@@ -75,7 +75,74 @@ body {
     background-color: whitesmoke;
 }
 
+.sidebar nav ul a.active li {
+    background-color: whitesmoke; 
+    color: #C750C5; 
+}
+
 .main {
     grid-area: main;
+    color: black;
+    flex-grow: 1;
     background-color: whitesmoke;
+}
+
+.page {
+    display: none;
+    color: black;
+    /* height: 100%; */
+    /* width: 100%; */
+}
+
+.page .active {
+    display: block;
+}
+
+section {
+    display: none;
+    justify-content: center;
+  }
+
+  section.active {
+    display: block;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+
+  th, td {
+    border: 2px solid black;
+    padding: 12px;
+    text-align: left;
+  }
+
+  th {
+    background-color: #f2f2f2;
+  }
+
+.RepairsMaintenance-page {
+    display: none;
+    height: 100%;
+    width: 100%;
+}   
+
+.Expenses-page {
+    display: none;
+    height: 100%;
+    width: 100%;
+}
+
+.TaxBillings {
+    display: none;
+    height: 100%;
+    width: 100%;
+}
+
+.Reports {
+    display: none;
+    height: 100%;
+    width: 100%;
 }

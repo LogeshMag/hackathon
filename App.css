@@ -1,0 +1,56 @@
+/* RegistrationForm.css */
+
+form {
+  color: black;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 600;
+  background-color: antiquewhite;
+  max-width: 400px;
+  margin-top: 3%;
+  margin-left: 34%;
+  padding: 20px;
+  border: none;
+  border-radius:20px 20px 20px 20px;
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.3);
+}
+
+form h2 {
+  margin-top: -5px;
+  margin-bottom: ;
+}
+
+label {
+  display: block;
+}
+
+input, textarea {
+  border: none;
+  width: 100%;
+  padding: 8px;
+  border-radius: 8px 8px 8px 8px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+button {
+  margin-left: 35%;
+  margin-top: 10px;
+  background-color: black;
+  color: whitesmoke;  
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 600;
+  padding: 15px 15px;
+  border: none;
+  border-radius: 14px 0px 14px 0px;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+}
+
+button:hover {
+  color: black;
+  border: 2px ridge black;
+  background-color: whitesmoke;
+}
+
+/* Add more styles as needed */
+

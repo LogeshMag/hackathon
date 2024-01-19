@@ -1,0 +1,130 @@
+import React, { useState } from 'react';
+import './AdminPage.css';
+
+const AdminPage = () => {
+  const [currentPage, setCurrentPage] = useState('DashboardPage');
+
+  const approveRow = () => {
+    // Add your logic for approving a row
+    console.log('Row approved');
+  };
+
+  const rejectRow = () => {
+    // Add your logic for rejecting a row
+    console.log('Row rejected');
+  };
+
+  const handleLinkClick = (href) => {
+    setCurrentPage(href);
+  };
+
+  return (
+    <div className="AdminPage-Container">
+      <div className="head">
+        <div className="head-left">
+          <img src="./images/AuroiTech_Logo.jpg" alt="Website Logo" />
+          <h2>AUROiTECH</h2>
+        </div>
+        <div className="head-right">
+          <h1>Dashboard</h1>
+        </div>
+      </div>
+      <div className="sidebar">
+        <nav>
+          <ul>
+            <li>
+              <a href="#DashboardPage" onClick={() => handleLinkClick('DashboardPage')}>
+                <span className="material-symbols-rounded">Dashboard</span>Dashboard
+              </a>
+            </li>
+            <li>
+              <a href="#TenantsPage" onClick={() => handleLinkClick('TenantsPage')}>
+                <span className="material-symbols-rounded">Tenancy</span>Tenants
+              </a>
+            </li>
+            <li>
+              <a href="#RepairPage" onClick={() => handleLinkClick('RepairPage')}>
+                <span className="material-symbols-rounded">home_repair_service</span>Repair & Maintenance
+              </a>
+            </li>
+            <li>
+              <a href="#ExpensesPage" onClick={() => handleLinkClick('ExpensesPage')}>
+                <span className="material-symbols-rounded">Payments</span>Expenses
+              </a>
+            </li>
+            <li>
+              <a href="#TaxPage" onClick={() => handleLinkClick('TaxPage')}>
+                <span className="material-symbols-rounded">universal_currency</span>Tax & Billings
+              </a>
+            </li>
+            <li>
+              <a href="#ReportsPage" onClick={() => handleLinkClick('ReportsPage')}>
+                <span className="material-symbols-rounded">partner_reports</span>Reports
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div className="main" id="main">
+        <div className={`page ${currentPage === 'DashboardPage' ? 'active' : ''}`} id="DashboardPage">
+          <h1>Dashboard Page</h1>
+        </div>
+        <div className={`page ${currentPage === 'TenantsPage' ? 'active' : ''}`} id="TenantsPage">
+          <h1>Approve Tenants</h1>
+          {/* Add a table with the specified headings */}
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Phn No</th>
+                <th>Room No</th>
+                <th>Aadhar</th>
+                <th>Approve</th>
+                <th>Reject</th>
+              </tr>
+            </thead>
+            <tbody>
+              {/* Add table rows with data as needed */}
+              <tr>
+                <td>John Doe</td>
+                <td>123-456-7890</td>
+                <td>101</td>
+                <td>1234-5678-9012</td>
+                <td>
+                  <button onClick={() => approveRow()}>
+                    <span className="material-symbols-rounded">check_circle</span>
+                  </button>
+                </td>
+                <td>
+                  <button onClick={() => rejectRow()}>
+                    <span className="material-symbols-rounded">dangerous</span>
+                  </button>
+                </td>
+              </tr>
+              {/* Add more rows as needed */}
+              <tr>
+                <td>Jane Doe</td>
+                <td>987-654-3210</td>
+                <td>102</td>
+                <td>9876-5432-1098</td>
+                <td>
+                  <button onClick={() => approveRow()}>
+                    <span className="material-symbols-rounded">check_circle</span>
+                  </button>
+                </td>
+                <td>
+                  <button onClick={() => rejectRow()}>
+                    <span className="material-symbols-rounded">dangerous</span>
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        {/* Add other pages similarly */}
+      </div>
+    </div>
+  );
+};
+
+export default AdminPage;
